@@ -6,6 +6,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\PeminjamanController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NilaiMuatanLokalController;
 
 
 Route::get('/', function () {
@@ -31,6 +32,15 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/kategori/{id}/edit', [KategoriController::class, 'edit']);
     Route::put('/kategori/{id}', [KategoriController::class, 'update']);
     Route::get('/kategori/{id}', [KategoriController::class, 'destroy']);
+
+    Route::prefix('kelas/1a/muatanlokal')->group(function () {
+    Route::get('/', [NilaiMuatanLokalController::class, 'index'])->name('nilai.index');
+    Route::get('/create', [NilaiMuatanLokalController::class, 'create'])->name('nilai.create');
+    Route::post('/store', [NilaiMuatanLokalController::class, 'store'])->name('nilai.store');
+    Route::get('/{id}/edit', [NilaiMuatanLokalController::class, 'edit'])->name('nilai.edit');
+    Route::put('/{id}', [NilaiMuatanLokalController::class, 'update'])->name('nilai.update');
+    Route::delete('/{id}', [NilaiMuatanLokalController::class, 'destroy'])->name('nilai.destroy');
+});
 
     Route::get('/visi', function () {
         return view('visi');
