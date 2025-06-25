@@ -1,16 +1,17 @@
 @php
     $q = '?code=' . ($class['code'] ?? '') . '&mapel=' . ($mapel['code'] ?? '');
+    $title = 'Daftar Penilaian ' . ' Siswa di Kelas ' . $class['name'] ?? '';
 @endphp
 
 @extends('master')
 
-@section('title', 'Daftar Penilaian')
+@section('title', $title)
 
 @section('content')
     <div class="main-content">
         <section class="section">
             <div class="section-header">
-                <h1>Daftar Penilaian Siswa di Kelas {{ $class['name'] ?? '' }}</h1>
+                <h1>{{ $title }}</h1>
             </div>
 
             <div class="section-body">
