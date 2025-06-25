@@ -1,0 +1,17 @@
+{
+    "name": "Penilaian Harian",
+    "short_name": "PH",
+    "start_url": "/index.php",
+    "background_color": "#6777ef",
+    "description": "Aplikasi Penilaian Harian Sekolah",
+    "display": "fullscreen",
+    "theme_color": "#6777ef",
+    "icons": [
+        {
+            "src": "logo.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}

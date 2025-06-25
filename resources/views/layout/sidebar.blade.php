@@ -17,7 +17,7 @@
 
             @foreach (config('other.kelas') as $class)
                 <li class="dropdown {{ request()->query('code') == $class['code'] ? 'active' : '' }}">
-                    <a href="#" class="nav-link has-dropdown "><i class="far fa-file-alt"></i> <span>Kelas
+                    <a href="#" class="nav-link has-dropdown "><i class="fas fa-user-graduate"></i> <span>Kelas
                             {{ $class['name'] }}</span></a>
                     <ul class="dropdown-menu">
                         @foreach (config('other.mapel') as $mapel)

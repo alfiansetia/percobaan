@@ -16,6 +16,9 @@
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/components.css') }}">
+
+    @include('pwa.head')
+
 </head>
 
 <body>
@@ -122,6 +125,8 @@
             });
         });
     </script>
+
+    @include('pwa.script')
 </body>
 
 </html>
